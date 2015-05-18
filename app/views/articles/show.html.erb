@@ -1,0 +1,15 @@
+<% if session[:article_id] %>
+<div>
+  <h4>Here is your special link:
+    <%= link_to "http://localhost:3000/category/#{@category.id}/article/#{@article.id}/edit/#{@article.edit_link}", edit_category_article_path %>
+  </h4>
+</div>
+<%end%>
+
+<h3><%= @article.title %></h3>
+<p><%= @article.price %></p>
+<p><%= @article.email %></p>
+<p><%= @article.body %></p>
+
+
+<%= link_to @category.name, category_articles_path %>
